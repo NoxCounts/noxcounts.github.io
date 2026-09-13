@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="768" height="768" viewBox="0 0 768 768">
+  <defs>
+    <!-- Criamos a máscara: Branco mantém o preenchimento, Preto fura (deixa transparente) -->
+    <mask id="vazarGrafico">
+      <!-- 1. Primeiro pintamos a área inteira de branco para o círculo aparecer -->
+      <rect width="768" height="768" fill="#ffffff" />
+      
+      <!-- 2. Colocamos o seu gráfico em PRETO dentro da máscara para furar o círculo -->
+      <!-- Linhas pretas que vão recortar o fundo -->
+      <g stroke="#000000" stroke-width="20" stroke-linecap="round">
+        <line x1="205" y1="480" x2="310" y2="360"/>
+        <line x1="310" y1="360" x2="425" y2="415"/>
+        <line x1="425" y1="415" x2="560" y2="305"/>
+      </g>
+
+      <!-- As 4 Bolinhas pretas que vão recortar o fundo -->
+      <g fill="#000000">
+        <circle cx="205" cy="480" r="34"/>
+        <circle cx="310" cy="360" r="34"/>
+        <circle cx="425" cy="415" r="34"/>
+        <circle cx="560" cy="305" r="34"/>
+      </g>
+    </mask>
+  </defs>
+
+  <!-- O Círculo Principal que recebe a máscara e fica vazado por dentro -->
+  <circle cx="384" cy="384" r="350" fill="#000000" mask="url(#vazarGrafico)"/>
+</svg>

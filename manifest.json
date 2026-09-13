@@ -1,0 +1,22 @@
+{
+  "name": "Contador de Inscritos Estimado",
+  "short_name": "Contador de inscritos Estimado",
+  "description": "Acompanhe o número de inscritos estimado de qualquer canal do YouTube em tempo real!",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "display": "standalone"
+ }

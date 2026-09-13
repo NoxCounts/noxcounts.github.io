@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Track the estimated number of subscribers of any YouTube channel in real time.">
+    <meta name="author" content="Bryan Ferreiraaa">
+
+    <meta name="keywords"
+        content="YouTube subscriber counter, YouTube subscriber count, live subscriber counter, real time subscriber counter, YouTube live subscriber count, YouTube subscriber counter live, YouTube subscriber tracker, YouTube channel counter, subscriber count live, YouTube sub count, live sub count, free YouTube subscriber counter, estimated YouTube subscribers">
+    <meta name="google-site-verification" content="d0utPExyaIhh1eM_kMyP1MQNryWnRhi-bSmBFbPHgD8">
+
+    <!-- Language -->
+    <meta http-equiv="content-language" content="en-US">
+
+    <!-- Canonical -->
+    <link rel="canonical"
+        href="https://bryan-ferreiraaa.github.io/youtube-subscriber-counter/">
+
+    <!-- Hreflang -->
+    <link rel="alternate"
+        hreflang="en"
+        href="https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/english">
+
+    <link rel="alternate"
+        hreflang="pt-BR"
+        href="https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"
+        content="YouTube Subscriber Counter - Live & Real Time">
+    <meta property="og:site_name"
+        content="YouTube Subscriber Counter">
+    <meta property="og:description"
+        content="Track the estimated number of subscribers of any YouTube channel in real time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url"
+        content="https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/english">
+    <meta property="og:image"
+        content="https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/english/images/background.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title"
+        content="YouTube Subscriber Counter - Live & Real Time">
+    <meta name="twitter:description"
+        content="Track the estimated number of subscribers of any YouTube channel in real time.">
+    <meta name="twitter:url"
+        content="https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/english/">
+    <meta name="twitter:image"
+        content="https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/english/images/background.png">
+
+    <!-- Website Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "YouTube Subscriber Counter",
+        "url": "https://bryan-ferreiraaa.github.io/contador-de-inscritos-estimado/"
+    }
+    </script>
+
+    <!-- Page Title -->
+    <title>YouTube Subscriber Counter - Live & Real Time</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    	<!-- Root-level safety net for older browsers -->
+    <link rel="shortcut icon" href="/contador-de-inscritos-estimado/favicon.ico" type="image/x-icon">
+		
+   <!-- Default icon for desktop browsers and fallbacks -->
+	<link rel="icon" type="image/png" sizes="16x16" href="/contador-de-inscritos-estimado/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/contador-de-inscritos-estimado/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/contador-de-inscritos-estimado/favicon-48x48.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/contador-de-inscritos-estimado/favicon-96x96.png">
+		
+    <!-- Default icon for the Safari browser -->
+     <link rel="icon" type="image/png" sizes="180x180" href="/contador-de-inscritos-estimado/apple-touch-icon.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="/contador-de-inscritos-estimado/apple-touch-icon.png">	
+	
+   <!-- Ideal resolutions for Android browsers and high-density, high-quality screens. -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/contador-de-inscritos-estimado/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="/contador-de-inscritos-estimado/android-chrome-512x512.png">	
+		<link rel="manifest" href="/contador-de-inscritos-estimado/manifest.json">
+
+    <!-- Rubik Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="busca-box">
+        <input
+            type="text"
+            id="input-id"
+            value="UC-lHJZR3Gqxm24_Vd_AJ5Yw"
+            placeholder="Paste the channel ID (UC...)">
+
+        <button onclick="mudarCanal()">Change Channel</button>
+    </div>
+
+    <div class="contador-card">
+
+        <img
+            id="canal-pfp"
+            class="avatar"
+            src=""
+            alt="YouTube Channel Avatar">
+
+        <h2 id="nome-canal" class="canal-titulo">
+            Loading...
+        </h2>
+
+        <div class="numero" id="inscritos">
+            0
+        </div>
+
+        <div class="label">
+            Estimated Subscribers
+        </div>
+
+        <div class="sub-dados">
+            Views:
+            <span
+                id="views"
+                style="color: #ffcc00; font-weight: bold;">
+                0
+            </span>
+        </div>
+
+        <div class="api-dados-container">
+
+            <div class="api-bloco">
+                <div class="api-titulo">
+                    Subscribers (API)
+                </div>
+
+                <span
+                    id="api-subs"
+                    style="font-weight: bold; color: #00ffcc;">
+                    0
+                </span>
+				
+            </div>
+            <div class="api-bloco">
+                <div class="api-titulo">
+                    Views (API)
+                </div>
+
+                <span
+                    id="api-views"
+                    style="font-weight: bold; color: #ff9900;">
+                    0
+                </span>
+            </div>
+        </div>
+        <div class="meta-container">
+            <span
+                id="meta-texto"
+                style="font-weight: bold; font-size: 14px;">
+                Calculating goal...
+            </span>
+
+            <div class="meta-barra-fundo">
+                <div
+                    id="meta-barra"
+                    class="meta-barra-progresso">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="768" height="768" viewBox="34 34 700 700">
+  <defs>
+    <clipPath id="limiteCirculo">
+      <circle cx="384" cy="384" r="350"/>
+    </clipPath>
+  </defs>
+
+  <!-- 1. Círculo Vermelho de Fundo -->
+  <circle cx="384" cy="384" r="350" fill="#f44336"/>
+
+  <g clip-path="url(#limiteCirculo)">
+    <!-- 2. A Sombra Longa Vetorial masterizada por você -->
+    <g fill="#000000" opacity="0.12">
+      <polygon points="181,504 229,456 800,1027 800,1123"/>
+      <polygon points="205,480 310,360 425,415 560,305 600,345 800,545 800,1075"/>
+      <polygon points="425,415 449,391 800,742 800,790"/>
+      <polygon points="515,346 593,298 800,535 800,583"/>
+    </g>
+
+    <!-- 3. O Gráfico Branco Principal -->
+    <g stroke="#ffffff" stroke-width="20" stroke-linecap="round">
+      <line x1="205" y1="480" x2="310" y2="360"/>
+      <line x1="310" y1="360" x2="425" y2="415"/>
+      <line x1="425" y1="415" x2="560" y2="305"/>
+    </g>
+
+    <!-- As 4 Bolinhas Brancas -->
+    <g fill="#ffffff">
+      <circle cx="205" cy="480" r="34"/>
+      <circle cx="310" cy="360" r="34"/>
+      <circle cx="425" cy="415" r="34"/>
+      <circle cx="560" cy="305" r="34"/>
+    </g>
+  </g>
+</svg>

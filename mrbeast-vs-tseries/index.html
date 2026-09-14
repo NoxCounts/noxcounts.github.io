@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NoxCounts — MrBeast VS T-Series: contador estimado de inscritos em tempo real.">
+  <title>NoxCounts — MrBeast VS T-Series</title>
+      <!-- Importação oficial da fonte Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href=style.css>
+</head>
+<body>
+  <main class="app">
+ <header class="topbar">
+
+  <div class="brand">
+
+    <div class="brand-mark">
+      <img src="https://noxcounts.github.io/favicon.png" alt="NoxCounts">
+    </div>
+
+    <div class="brand-text">
+      <strong>NoxCounts</strong>
+      <span>Subscriber Battle</span>
+    </div>
+
+  </div>
+
+  <div class="live">
+    <i></i> AO VIVO
+  </div>
+
+</header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUTUBE SUBSCRIBER BATTLE</p>
+      <h1>MrBeast <span>VS</span> T-Series</h1>
+      <p class="subtitle">Contagem estimada de inscritos, atualizada automaticamente.</p>
+    </section>
+
+    <section class="battle-grid">
+      <article class="channel-card mrbeast">
+        <div class="rank">#1</div>
+        <div class="avatar-wrap">
+          <img id="mrbeast-pfp" alt="MrBeast" class="avatar">
+        </div>
+        <h2 id="mrbeast-name">MrBeast</h2>
+        <p class="handle">@MrBeast</p>
+
+        <div class="counter-shell">
+          <div id="mrbeast-subs" class="counter" aria-label="Inscritos do MrBeast">0</div>
+          <span>INSCRITOS</span>
+        </div>
+
+        <div class="stats">
+          <div><b id="mrbeast-views">—</b><span>visualizações</span></div>
+          <div><b id="mrbeast-api-subs">—</b><span>API</span></div>
+        </div>
+
+        <a href="https://www.youtube.com/@MrBeast" target="_blank" rel="noopener">Abrir canal ↗</a>
+      </article>
+
+      <div class="versus">
+        <div class="vs-circle">VS</div>
+        <div class="line"></div>
+        <div class="status" id="winner-status">Calculando...</div>
+      </div>
+
+      <article class="channel-card tseries">
+        <div class="rank">#2</div>
+        <div class="avatar-wrap">
+          <img id="tseries-pfp" alt="T-Series" class="avatar">
+        </div>
+        <h2 id="tseries-name">T-Series</h2>
+        <p class="handle">@tseries</p>
+
+        <div class="counter-shell">
+          <div id="tseries-subs" class="counter" aria-label="Inscritos da T-Series">0</div>
+          <span>INSCRITOS</span>
+        </div>
+
+        <div class="stats">
+          <div><b id="tseries-views">—</b><span>visualizações</span></div>
+          <div><b id="tseries-api-subs">—</b><span>API</span></div>
+        </div>
+
+        <a href="https://www.youtube.com/@tseries" target="_blank" rel="noopener">Abrir canal ↗</a>
+      </article>
+    </section>
+
+    <section class="difference-card">
+      <div>
+        <span class="section-label">DIFERENÇA</span>
+        <strong id="difference">Calculando...</strong>
+      </div>
+      <div class="leader-label" id="leader-label">—</div>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-head">
+        <span>PROPORÇÃO DE INSCRITOS</span>
+        <span id="ratio-text">—</span>
+      </div>
+      <div class="bar">
+        <div id="mrbeast-bar" class="bar-mrbeast"></div>
+        <div id="tseries-bar" class="bar-tseries"></div>
+      </div>
+      <div class="bar-labels">
+        <span>MrBeast <b id="mrbeast-percent">—</b></span>
+        <span>T-Series <b id="tseries-percent">—</b></span>
+      </div>
+    </section>
+
+    <footer>
+      <span>Atualização automática a cada 2 segundos</span>
+      <span id="last-update">Aguardando dados...</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

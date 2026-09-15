@@ -1,0 +1,13 @@
+# NoxCounts robots.txt
+# Search engine crawler configuration
+
+User-agent: *
+
+Allow: /
+
+# Exclude unnecessary files
+Disallow: /icons-de-teste/
+Disallow: /google6517374c621390a.html.txt
+
+# Sitemap
+Sitemap: https://noxcounts.github.io/sitemap.xml

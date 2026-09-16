@@ -454,7 +454,7 @@ footer {
 }
 
 /* ============================= */
-/* LOGO NOXCOUNTS - AJUSTE FINAL */
+/* NOXCOUNTS LOGO - FINAL ADJUSTMENT */
 /* ============================= */
 
 .brand {
@@ -492,7 +492,7 @@ footer {
     overflow: hidden;
 }
 
-/* Texto ao lado da logo */
+/* Text beside the logo */
 .brand > div:last-child {
     display: flex;
     flex-direction: column;
@@ -503,13 +503,13 @@ footer {
     flex: 0 0 auto;
 }
 
-/* Nome */
+/* Name */
 .brand > div:last-child strong {
     display: block;
     white-space: nowrap;
 }
 
-/* Subtítulo */
+/* Subtitle */
 .brand > div:last-child span {
     display: block;
     white-space: nowrap;

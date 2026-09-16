@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NoxCounts — MrBeast VS T-Series: contador estimado de inscritos em tempo real.">
-  <title>NoxCounts — MrBeast VS T-Series</title>
-      <!-- Importação oficial da fonte Rubik -->
+  <meta name="description" content="NoxCounts — MrBeast VS T-Series: Estimated real-time subscriber count.">
+  <title>NoxCounts — MrBeast VS T-Series Sub Count Live</title>
+      <!-- Official Rubik font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href=style.css>
   
-  	<!-- Favicon SVG para Navegadores Modernos Desktop E Dispositivos Móveis -->
+  	<!-- SVG favicon for modern desktop browsers and mobile devices -->
     <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">
 			
-	<!-- Rede de segurança na raiz para navegadores antigos -->
+	<!-- Root fallback for older browsers -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 	<link rel="icon" href="/favicon.ico" sizes="any">	
 	
-   <!-- Ícone padrão para navegadores desktop e fallbacks -->
+   <!-- Default icon for desktop browsers and fallbacks -->
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">	
 		
-   <!-- Ícone padrão para navegador Safari -->
+   <!-- Default icon for Safari browser -->
    <link rel="icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png">
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">	
 
-	<!-- SVG para Safari no Desktop Se o Site estiver Salvo Nos Favoritos -->
+	<!-- SVG for Safari desktop when the site is saved as a favorite -->
    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f44336"> 
 		
-   <!-- Resoluções ideais para Navegadores Do Android e telas de alta densidade e qualidade -->
+   <!-- Ideal resolutions for Android browsers and high-density screens -->
    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 </head>
@@ -54,7 +54,7 @@
   </div>
 
   <div class="live">
-    <i></i> AO VIVO
+    <i></i> LIVE
   </div>
 
 </header>
@@ -62,7 +62,7 @@
     <section class="hero">
       <p class="eyebrow">YOUTUBE SUBSCRIBER BATTLE</p>
       <h1>MrBeast <span>VS</span> T-Series</h1>
-      <p class="subtitle">Contagem estimada de inscritos, atualizada automaticamente.</p>
+      <p class="subtitle">Estimated subscriber count, updated automatically.</p>
     </section>
 
     <section class="battle-grid">
@@ -76,21 +76,21 @@
 
         <div class="counter-shell">
           <div id="mrbeast-subs" class="counter" aria-label="Inscritos do MrBeast">0</div>
-          <span>INSCRITOS</span>
+          <span>SUBSCRIBERS</span>
         </div>
 
         <div class="stats">
-          <div><b id="mrbeast-views">—</b><span>visualizações</span></div>
+          <div><b id="mrbeast-views">—</b><span>views</span></div>
           <div><b id="mrbeast-api-subs">—</b><span>API</span></div>
         </div>
 
-        <a href="https://www.youtube.com/@MrBeast" target="_blank" rel="noopener">Abrir canal ↗</a>
+        <a href="https://www.youtube.com/@MrBeast" target="_blank" rel="noopener">Open channel ↗</a>
       </article>
 
       <div class="versus">
         <div class="vs-circle">VS</div>
         <div class="line"></div>
-        <div class="status" id="winner-status">Calculando...</div>
+        <div class="status" id="winner-status">Calculating...</div>
       </div>
 
       <article class="channel-card tseries">
@@ -103,29 +103,29 @@
 
         <div class="counter-shell">
           <div id="tseries-subs" class="counter" aria-label="Inscritos da T-Series">0</div>
-          <span>INSCRITOS</span>
+          <span>SUBSCRIBERS</span>
         </div>
 
         <div class="stats">
-          <div><b id="tseries-views">—</b><span>visualizações</span></div>
+          <div><b id="tseries-views">—</b><span>views</span></div>
           <div><b id="tseries-api-subs">—</b><span>API</span></div>
         </div>
 
-        <a href="https://www.youtube.com/@tseries" target="_blank" rel="noopener">Abrir canal ↗</a>
+        <a href="https://www.youtube.com/@tseries" target="_blank" rel="noopener">Open channel ↗</a>
       </article>
     </section>
 
     <section class="difference-card">
       <div>
-        <span class="section-label">DIFERENÇA</span>
-        <strong id="difference">Calculando...</strong>
+        <span class="section-label">DIFFERENCE</span>
+        <strong id="difference">Calculating...</strong>
       </div>
       <div class="leader-label" id="leader-label">—</div>
     </section>
 
     <section class="progress-card">
       <div class="progress-head">
-        <span>PROPORÇÃO DE INSCRITOS</span>
+        <span>PROPORÇÃO DE SUBSCRIBERS</span>
         <span id="ratio-text">—</span>
       </div>
       <div class="bar">
@@ -139,8 +139,8 @@
     </section>
 
     <footer>
-      <span>Atualização automática a cada 2 segundos</span>
-      <span id="last-update">Aguardando dados...</span>
+      <span>Automatic update every 2 seconds</span>
+      <span id="last-update">Waiting for data...</span>
     </footer>
   </main>
   <script src="script.js"></script>

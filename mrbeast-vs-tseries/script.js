@@ -16,7 +16,7 @@ function el(id) {
 
 function numero(valor) {
     const n = Number(valor);
-    return Number.isFinite(n) ? n.toLocaleString("pt-BR") : "0";
+    return Number.isFinite(n) ? n.toLocaleString("en-US") : "0";
 }
 
 function dado(dados, grupo, nome) {
@@ -159,8 +159,8 @@ async function buscarCanal(canal) {
         }
 
     } catch (erro) {
-        console.error("Erro ao buscar " + canal + ":", erro);
-        colocarTexto(canal + "-name", "Erro na API");
+        console.error("Error fetching " + canal + ":", erro);
+        colocarTexto(canal + "-name", "API Error");
     }
 }
 
@@ -169,9 +169,9 @@ function atualizarBatalha() {
     const tseries = estado.tseries.inscritos;
 
     if (mrbeast <= 0 || tseries <= 0) {
-        colocarTexto("difference", "Calculando...");
-        colocarTexto("leader-label", "Calculando...");
-        colocarTexto("winner-status", "Calculando...");
+        colocarTexto("difference", "Calculating...");
+        colocarTexto("leader-label", "Calculating...");
+        colocarTexto("winner-status", "Calculating...");
         colocarTexto("ratio-text", "—");
 
         if (el("mrbeast-bar")) el("mrbeast-bar").style.width = "0%";
@@ -184,10 +184,10 @@ function atualizarBatalha() {
 
     colocarTexto(
         "difference",
-        numero(diferenca) + " inscritos"
+        numero(diferenca) + " subscribers"
     );
 
-    let lider = "Empate";
+    let lider = "Tie";
 
     if (mrbeast > tseries) {
         lider = "MrBeast";
@@ -197,16 +197,16 @@ function atualizarBatalha() {
 
     colocarTexto(
         "leader-label",
-        lider === "Empate"
-            ? "Empate"
-            : lider + " está na frente"
+        lider === "Tie"
+            ? "Tie"
+            : lider + " is ahead"
     );
 
     colocarTexto(
         "winner-status",
-        lider === "Empate"
-            ? "Empate"
-            : lider + " lidera"
+        lider === "Tie"
+            ? "Tie"
+            : lider + " leads"
     );
 
     const total = mrbeast + tseries;
@@ -242,8 +242,8 @@ function atualizarBatalha() {
 
     colocarTexto(
         "last-update",
-        "Última atualização: " +
-        new Date().toLocaleTimeString("pt-BR")
+        "Last update: " +
+        new Date().toLocaleTimeString("en-US")
     );
 }
 

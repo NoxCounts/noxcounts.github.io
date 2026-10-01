@@ -253,3 +253,111 @@ button:hover {
     height: 100%;
     transition: width 0.4s ease;
 }
+
+.lc-footer {
+    background-color: #121212; /* Fundo escuro premium */
+    color: #ffffff; /* Texto principal em branco */
+    font-family: 'Rubik' -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 60px 40px 30px 40px;
+    border-top: 1px solid #222222; /* Linha sutil escura */
+    margin-top: 60px;
+}
+
+.lc-footer-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.lc-logo-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.lc-brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.lc-brand-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #aaaaaa; /* Cinza claro para descrição */
+    max-width: 280px;
+    margin: 0;
+}
+
+.lc-footer-links h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.lc-footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lc-footer-links li {
+    margin-bottom: 10px;
+}
+
+.lc-footer-links a {
+    font-size: 13px;
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.lc-footer-links a:hover {
+    color: #ffffff; /* Brilha ao passar o mouse */
+}
+
+/* Barra inferior de direitos e aviso */
+.lc-footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #666666;
+}
+
+.lc-copyright strong {
+    color: #ffffff;
+}
+
+/* O texto do aviso no canto direito */
+.lc-disclaimer {
+    text-align: right;
+    font-style: normal;
+    color: #666666;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .lc-footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .lc-footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .lc-disclaimer {
+        text-align: center;
+    }
+}

@@ -258,5 +258,5 @@ async function atualizarTudo() {
 
 document.addEventListener("DOMContentLoaded", () => {
     atualizarTudo();
-    setInterval(atualizarTudo, 2000);
+    setInterval(atualizarTudo, 1000);
 });

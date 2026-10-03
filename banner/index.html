@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner MrBeast VS T-Series</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+<style>.nox-banner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 850px;
+    height: 80px;
+    padding: 10px 24px;
+    background-color: #C2410C;
+    font-family: 'Rubik', Roboto, Arial, sans-serif;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nox-banner:hover {
+    background-color: #7C2D12;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nox-banner-versus {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+
+.nox-banner-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    background-color: #FFFFFF;
+}
+
+.nox-banner-vs {
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.nox-banner-title {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+    .nox-banner {
+        height: auto;
+        min-height: 80px;
+        padding: 10px 14px;
+    }
+
+    .nox-banner-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nox-banner-versus {
+        gap: 8px;
+        margin-right: 10px;
+    }
+
+    .nox-banner-vs {
+        font-size: 15px;
+    }
+
+    .nox-banner-title {
+        font-size: 16px;
+        white-space: normal;
+    }
+}</style>
+</head>
+
+<body>
+
+<a href="https://noxcounts.github.io/mrbeast-vs-tseries/" target="_blank" rel="noopener noreferrer" class="nox-banner">
+    <div class="nox-banner-versus">
+        <img class="nox-banner-logo" src="https://livecounts.io/static/beast.jpg" alt="MrBeast Logo">
+        <span class="nox-banner-vs">VS</span>
+        <img class="nox-banner-logo" src="https://livecounts.io/static/tseries.jpg" alt="T-Series Logo">
+    </div>
+
+    <div class="nox-banner-title">MrBeast VS T-Series Live Subscriber Count</div>
+</a>
+
+</body>
+</html>

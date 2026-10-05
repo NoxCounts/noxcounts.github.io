@@ -1,7 +1,7 @@
 {
-  "name": "Contador de Inscritos Estimado",
-  "short_name": "Contador de inscritos Estimado",
-  "description": "Acompanhe o número de inscritos estimado de qualquer canal do YouTube em tempo real!",
+  "name": "NoxCounts - Contador de Inscritos Estimado",
+  "short_name": "NoxCounts",
+  "description": "Acompanhe o número de inscritos estimado de qualquer canal do YouTube em tempo real com o NoxCounts!",
   "start_url": "/index.html",
   "icons": [
     {

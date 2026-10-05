@@ -124,6 +124,8 @@ function calcularMeta(inscritos, valorGoalMixerno) {
 }
 
 async function obterDadosMixerno() {
+    if (!canalAtualId) return;
+
     const urlApi = "https://mixerno.space/api/youtube-channel-counter/user/" + canalAtualId;
     try {
         const resposta = await fetch(urlApi);
@@ -167,28 +169,57 @@ async function obterDadosMixerno() {
     }
 }
 
-function mudarCanal() {
-    const novoId = document.getElementById("input-id").value.trim();
-    if (novoId !== "") {
-        canalAtualId = novoId; 
-        document.getElementById("nome-canal").innerText = "Buscando...";
-        document.getElementById("canal-pfp").style.display = "none";
-        document.getElementById("meta-texto").innerText = "Calculando meta...";
-        document.getElementById("meta-barra").style.width = "0%";
-        
-        document.getElementById("inscritos").innerHTML = "0";
-        document.getElementById("views").innerHTML = "0";
-        
-        inscritosAtuais = 0;
-        viewsAtuais = 0;
-        jogandoRoletaInscritos = false;
-        jogandoRoletaViews = false;
-        
-        clearInterval(intervaloId);
-        obterDadosMixerno();
-        intervaloId = setInterval(obterDadosMixerno, 2000);
+async function mudarCanal() {
+    const termo = document.getElementById("input-id").value.trim();
+    if (termo === "") return;
+
+    document.getElementById("nome-canal").innerText = "Buscando...";
+    document.getElementById("canal-pfp").style.display = "none";
+    document.getElementById("meta-texto").innerText = "Calculando meta...";
+    document.getElementById("meta-barra").style.width = "0%";
+    
+    document.getElementById("inscritos").innerHTML = "0";
+    document.getElementById("views").innerHTML = "0";
+    
+    inscritosAtuais = 0;
+    viewsAtuais = 0;
+    jogandoRoletaInscritos = false;
+    jogandoRoletaViews = false;
+
+    let idResolvido = termo;
+
+    // Se NÃO for um ID direto do YouTube (não começa com UC ou não tem 24 caracteres)
+    if (!(termo.startsWith('UC') && termo.length === 24)) {
+        try {
+            const urlBusca = `https://mixerno.space/api/youtube-channel-counter/search/${encodeURIComponent(termo)}`;
+            const resp = await fetch(urlBusca);
+            const dadosBusca = await resp.json();
+
+            if (dadosBusca && dadosBusca.list && dadosBusca.list.length > 0) {
+                idResolvido = dadosBusca.list[0][2]; // Pega o ID do 1º resultado encontrado
+            } else {
+                document.getElementById("nome-canal").innerText = "Canal não encontrado";
+                return;
+            }
+        } catch (err) {
+            console.error("Erro na busca por nome:", err);
+            document.getElementById("nome-canal").innerText = "Erro na busca";
+            return;
+        }
     }
+
+    canalAtualId = idResolvido;
+    
+    if (intervaloId) clearInterval(intervaloId);
+    obterDadosMixerno();
+    intervaloId = setInterval(obterDadosMixerno, 2000);
 }
 
+// Permite buscar pressionando Enter no campo
+document.getElementById("input-id").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") mudarCanal();
+});
+
+// Execução inicial
 obterDadosMixerno();
 intervaloId = setInterval(obterDadosMixerno, 2000);

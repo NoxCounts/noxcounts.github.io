@@ -1,38 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-<!-- Versao Raiz -->
-  
   <url>
-    <loc>https://noxcounts.github.io/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://noxcounts.github.io/english/"/>
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://noxcounts.github.io/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noxcounts.github.io/"/>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+       <loc>https://noxcounts.github.io/</loc>
+       <lastmod>2026-10-05T22:55:10+00:00</lastmod>
+       <priority>1.0000</priority>
   </url>
-
-<!-- Versao Ingles -->
-  
   <url>
-    <loc>https://noxcounts.github.io/english/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://noxcounts.github.io/english/"/>
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://noxcounts.github.io/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noxcounts.github.io/"/>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://noxcounts.github.io/en/</loc>
+       <lastmod>2026-10-05T22:55:10+00:00</lastmod>
+       <priority>0.9000</priority>
   </url>
-
-<!-- Versao PT-BR -->
-  
   <url>
-    <loc>https://noxcounts.github.io/pt-br/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://noxcounts.github.io/english/"/>
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://noxcounts.github.io/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noxcounts.github.io/"/>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://noxcounts.github.io/mrbeast-vs-tseries/pt-br/</loc>
+       <lastmod>2026-10-05T22:55:10+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
+  <url>
+       <loc>https://noxcounts.github.io/mrbeast-vs-tseries/</loc>
+       <lastmod>2026-10-05T22:55:10+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
 </urlset>
